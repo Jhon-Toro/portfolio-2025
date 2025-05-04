@@ -1,0 +1,38 @@
+[
+    {
+      "label": "Inicio",
+      "icon": "v1746114632/home_ljcyn2.svg",
+      "active": true,
+      "href": ""
+    },
+    {
+      "label": "Sobre mí",
+      "icon": "v1746116568/paper_zminln.svg",
+      "active": false,
+      "href": "#aboutme"
+    },
+    {
+      "label": "Proyectos",
+      "icon": "v1746116568/command.line_dlwmmb.svg",
+      "active": false,
+      "href": "#projects"
+    },
+    {
+      "label": "Habilidades",
+      "icon": "v1746123913/chart-bar_srch49.svg",
+      "active": false,
+      "href": "#skills"
+    },
+    {
+      "label": "Contacto",
+      "icon": "v1746123995/device-mobile_dvkunz.svg",
+      "active": false,
+      "href": "#contact"
+    },
+    {
+      "label": "Github",
+      "icon": "v1746124067/github_rzzm5n.svg",
+      "active": false,
+      "href": "https://github.com/Jhon-Toro/"
+    }
+  ]

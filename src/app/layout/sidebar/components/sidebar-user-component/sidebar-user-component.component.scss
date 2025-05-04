@@ -1,0 +1,24 @@
+@use "utils" as *;
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  padding: pxToRem(20px) pxToRem(13px);
+  gap: pxToRem(16px);
+
+  &_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 0;
+
+    span {
+      font-size: pxToRem(13px);
+    }
+
+    a {
+      color: #6a00ff;
+    }
+  }
+}

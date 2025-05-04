@@ -1,0 +1,20 @@
+@use "utils" as *;
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  gap: pxToRem(16px);
+
+  &_avatar {
+    width: pxToRem(50px);
+    height: pxToRem(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_name {
+    font-weight: bold;
+    font-size: pxToRem(25px);
+  }
+}

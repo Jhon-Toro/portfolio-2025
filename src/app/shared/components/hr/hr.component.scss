@@ -1,0 +1,7 @@
+@use "utils" as *;
+
+hr {
+    border: none;
+    border-top: pxToRem(3px) solid #a5a3a3;
+    width: 100%;
+}

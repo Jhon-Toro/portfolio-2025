@@ -1,0 +1,22 @@
+<nav aria-label="Main navigation" class="sidebar__nav">
+  @for (item of sidebarItems(); track $index) {
+  <li class="sidebar__nav_list">
+    <a
+      class="sidebar__nav_item"
+      [class]="{ active: item.active }"
+      [href]="item.href"
+      role="link"
+    >
+      <img
+        [ngSrc]="item.icon"
+        width="25"
+        height="25"
+        alt="{{ item.label }} icon"
+      />
+      @if (isExpanded()) {
+      <span>{{ item.label }}</span>
+      }
+    </a>
+  </li>
+  }
+</nav>

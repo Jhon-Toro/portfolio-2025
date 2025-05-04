@@ -1,0 +1,16 @@
+<aside class="sidebar" [class]="{ expanded: isExpanded(), overlay: isMobile }">
+  <app-sidebar-header [isExpanded]="isExpanded()" />
+  <app-hr />
+  <app-sidebar-nav
+    [sidebarItems]="sidebarItemsSignal()"
+    [isExpanded]="isExpanded()"
+  />
+  <app-hr />
+  <app-sidebar-settings
+    [settings]="settings"
+    [isExpanded]="isExpanded()"
+    (toggleSidebar)="toggleSidebar()"
+    (darkModeToggle)="onDarkModeToggle($event)"
+  />
+  <app-sidebar-user [isExpanded]="isExpanded()" />
+</aside>

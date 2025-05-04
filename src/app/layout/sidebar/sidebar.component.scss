@@ -1,0 +1,32 @@
+@use "utils" as *;
+
+.sidebar {
+  width: pxToRem(80px);
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: pxToRem(1px) solid #e5e7eb;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: pxToRem(20px) pxToRem(15px);
+  box-shadow: pxToRem(2px) 0 pxToRem(8px) rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: pxToRem(1px) pxToRem(1px) pxToRem(20px) rgba(0, 0, 0, 0.5);
+  text-wrap: nowrap;
+  justify-content: space-between;
+
+  &.expanded {
+    width: pxToRem(250px);
+  }
+
+  &.overlay {
+    position: absolute;
+    height: 100vh;
+    box-shadow: 0 0 0 pxToRem(9999px) rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+  }
+
+}
