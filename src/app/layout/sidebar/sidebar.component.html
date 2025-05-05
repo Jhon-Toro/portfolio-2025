@@ -1,4 +1,8 @@
-<aside class="sidebar" [class]="{ expanded: isExpanded(), overlay: isMobile }">
+<aside 
+  class="sidebar" 
+  [class.expanded]="isExpanded()"
+  [class.overlay]="isMobile"
+>
   <app-sidebar-header [isExpanded]="isExpanded()" />
   <app-hr />
   <app-sidebar-nav
@@ -12,5 +16,5 @@
     (toggleSidebar)="toggleSidebar()"
     (darkModeToggle)="onDarkModeToggle($event)"
   />
-  <app-sidebar-user [isExpanded]="isExpanded()" />
+  <app-sidebar-user [isExpanded]="isExpanded()"/>
 </aside>

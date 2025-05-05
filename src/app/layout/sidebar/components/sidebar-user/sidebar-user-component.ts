@@ -9,4 +9,5 @@ import { Component, input } from '@angular/core';
 })
 export class SidebarUserComponentComponent {
   readonly isExpanded = input<boolean>(false);
+  readonly isReady = input<boolean>();
 }

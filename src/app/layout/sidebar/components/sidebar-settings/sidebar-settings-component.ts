@@ -12,7 +12,6 @@ import { SwitchComponent } from "../../../../shared/components/switch/switch.com
 export class SidebarSettingsComponentComponent {
   readonly settings = input<SettingItem[]>([]);
   readonly isExpanded = input<boolean>(false);
-
   readonly toggleSidebar = output<void>();
   readonly darkModeToggle = output<boolean>();
 

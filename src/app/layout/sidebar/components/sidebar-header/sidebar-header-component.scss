@@ -17,7 +17,7 @@
     font-weight: bold;
     font-size: pxToRem(25px);
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 0.3s;
 
     &.expanded {
       opacity: 1;

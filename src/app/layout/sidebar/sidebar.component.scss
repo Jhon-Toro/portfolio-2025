@@ -3,6 +3,7 @@
 .sidebar {
   width: pxToRem(80px);
   height: 100vh;
+  overflow: hidden;
   background-color: #ffffff;
   border-right: pxToRem(1px) solid #e5e7eb;
   transition: width 0.3s ease;

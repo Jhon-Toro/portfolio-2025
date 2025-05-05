@@ -19,10 +19,22 @@
     text-decoration: none;
     color: #374151;
     border-radius: 0.5rem;
-    transition: background-color 0.2s;
+    transition: opacity 0.3s;
+
+    span {
+      opacity: 0;
+      &.expanded {
+        opacity: 1;
+      }
+    }
 
     app-switch {
-      margin-left: auto;
+      opacity: 0;
+      transform: translateX(30px);
+      
+      &.expanded {
+        opacity: 1;
+      }
     }
     
     &:hover {

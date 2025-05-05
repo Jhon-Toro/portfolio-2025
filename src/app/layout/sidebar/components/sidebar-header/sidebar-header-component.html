@@ -9,7 +9,5 @@
       alt="David Logo"
     />
   </a>
-  @if (isExpanded()) {
-  <span class="sidebar__header_name" [class]="{ expanded : isExpanded()}">Jhon Toro</span>
-  }
+  <span class="sidebar__header_name" [class.expanded]="isExpanded()">Jhon Toro</span>
 </section>

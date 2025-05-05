@@ -1,15 +1,15 @@
 <section class="sidebar__settings">
-  @for (setting of settings(); track $index) { @if (setting.type === 'toggle') {
-      @if (isExpanded()) {
-        <li class="sidebar__nav_item">
-          <img [ngSrc]="setting.icon" width="20" height="20" alt="Dark mode icon" />
-          <span>{{ setting.label }}</span>
-          <app-switch
-            (toggle)="onToggle($event)"
-            [checked]="setting.value!"
-          />
-        </li>
-      }
+  @for (setting of settings(); track $index) { 
+    @if (setting.type === 'toggle') {
+      <li class="sidebar__nav_item">
+        <img [ngSrc]="setting.icon" width="20" height="20" alt="Dark mode icon" />
+        <span [class.expanded]="isExpanded()">{{ setting.label }}</span>
+        <app-switch
+          [class.expanded]="isExpanded()"
+          (toggle)="onToggle($event)"
+          [checked]="setting.value!"
+        />
+      </li>
     }
     @if (setting.type === 'collapse') {
       <li class="sidebar__nav_item toggle" (click)="onCollapseClick()">
@@ -20,9 +20,7 @@
           alt="Toggle icon"
           [class]="{ rotate: isExpanded() }"
         />
-        @if (isExpanded()) {
-        <span>{{ setting.label }}</span>
-        }
+          <span [class.expanded]="isExpanded()">{{ setting.label }}</span>
       </li>
     } 
   }

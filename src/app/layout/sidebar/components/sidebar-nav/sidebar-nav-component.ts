@@ -12,5 +12,4 @@ import { NgOptimizedImage } from '@angular/common';
 export class SidebarNavComponentComponent {
   readonly sidebarItems = input<SidebarItem[]>([]);
   readonly isExpanded = input<boolean>(false);
-
 }
