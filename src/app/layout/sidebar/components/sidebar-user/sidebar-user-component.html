@@ -5,9 +5,7 @@
     height="20"
     alt="User icon"
   />
-  @if (isExpanded()) {
-  <p class="sidebar__user_details">
+  <p class="sidebar__user_details" [class.expanded]="isExpanded()">
     <a href="mailto:toromurieljhongmail.com">toromurieljhongmail.com</a>
   </p>
-  }
 </footer>

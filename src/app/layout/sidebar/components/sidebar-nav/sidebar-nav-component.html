@@ -13,9 +13,7 @@
         height="25"
         alt="{{ item.label }} icon"
       />
-      @if (isExpanded()) {
-      <span>{{ item.label }}</span>
-      }
+      <span [class.expanded]="isExpanded()">{{ item.label }}</span>
     </a>
   </li>
   }

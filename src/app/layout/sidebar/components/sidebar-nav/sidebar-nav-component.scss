@@ -19,6 +19,14 @@
     border-radius: 0.5rem;
     transition: background-color 0.2s;
 
+    span {
+      opacity: 0;
+      transition: opacity 0.3s;
+      
+      &.expanded{
+        opacity: 1;
+      }
+    }
     &:hover {
       background-color: #f3f4f6;
     }

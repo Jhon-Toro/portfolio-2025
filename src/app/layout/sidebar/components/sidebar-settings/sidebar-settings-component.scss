@@ -23,6 +23,7 @@
 
     span {
       opacity: 0;
+      transition: opacity 0.3s;
       &.expanded {
         opacity: 1;
       }
@@ -30,6 +31,7 @@
 
     app-switch {
       opacity: 0;
+      transition: opacity 0.3s;
       transform: translateX(30px);
       
       &.expanded {

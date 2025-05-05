@@ -12,7 +12,12 @@
     justify-content: center;
     align-self: center;
     margin-bottom: 0;
-
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+    &.expanded {
+      opacity: 1;
+    }
     span {
       font-size: pxToRem(13px);
     }
