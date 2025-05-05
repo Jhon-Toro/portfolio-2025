@@ -2,6 +2,7 @@
 
 .sidebar__settings {
   .toggle {
+    cursor: pointer;
     img {
       transition: transform 0.3s ease;
     }
@@ -20,6 +21,10 @@
     border-radius: 0.5rem;
     transition: background-color 0.2s;
 
+    app-switch {
+      margin-left: auto;
+    }
+    
     &:hover {
       background-color: #f3f4f6;
     }
@@ -28,4 +33,8 @@
       margin-right: pxToRem(16px);
     }
   }
+}
+
+.switch-not-expanded{
+  padding: 0 pxToRem(6px);
 }

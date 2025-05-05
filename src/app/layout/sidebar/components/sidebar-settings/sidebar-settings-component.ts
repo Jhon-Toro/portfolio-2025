@@ -6,8 +6,8 @@ import { SwitchComponent } from "../../../../shared/components/switch/switch.com
 @Component({
   selector: 'app-sidebar-settings',
   imports: [NgOptimizedImage, SwitchComponent],
-  templateUrl: './sidebar-settings-component.component.html',
-  styleUrl: './sidebar-settings-component.component.scss'
+  templateUrl: './sidebar-settings-component.html',
+  styleUrl: './sidebar-settings-component.scss'
 })
 export class SidebarSettingsComponentComponent {
   readonly settings = input<SettingItem[]>([]);

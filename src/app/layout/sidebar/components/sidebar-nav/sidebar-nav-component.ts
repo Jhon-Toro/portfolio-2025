@@ -6,8 +6,8 @@ import { NgOptimizedImage } from '@angular/common';
 @Component({
   selector: 'app-sidebar-nav',
   imports: [NgOptimizedImage],
-  templateUrl: './sidebar-nav-component.component.html',
-  styleUrl: './sidebar-nav-component.component.scss'
+  templateUrl: './sidebar-nav-component.html',
+  styleUrl: './sidebar-nav-component.scss'
 })
 export class SidebarNavComponentComponent {
   readonly sidebarItems = input<SidebarItem[]>([]);

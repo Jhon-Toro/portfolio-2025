@@ -10,7 +10,7 @@
   flex-direction: column;
   padding: pxToRem(20px) pxToRem(15px);
   box-shadow: pxToRem(2px) 0 pxToRem(8px) rgba(0, 0, 0, 0.05);
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 100;
@@ -23,7 +23,7 @@
   }
 
   &.overlay {
-    position: absolute;
+    position: relative;
     height: 100vh;
     box-shadow: 0 0 0 pxToRem(9999px) rgba(0, 0, 0, 0.5);
     background-color: #fff;

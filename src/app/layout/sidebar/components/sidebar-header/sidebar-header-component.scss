@@ -16,5 +16,11 @@
   &_name {
     font-weight: bold;
     font-size: pxToRem(25px);
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    &.expanded {
+      opacity: 1;
+    }
   }
 }
