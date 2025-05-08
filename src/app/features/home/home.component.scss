@@ -11,9 +11,18 @@
 
 .hero-section {
     background-color: white;
-    padding: pxToRem(80px);
+    padding: pxToRem(150px) pxToRem(80px);
+
+    @include media-xs(){
+        padding: pxToRem(150px) pxToRem(20px);
+    }
 }
 
 .projects-section {
     padding: pxToRem(20px);
+}
+
+.skills-section{
+    padding: pxToRem(20px);
+    background-color: white;
 }

@@ -1,0 +1,28 @@
+<section id="skills" class="skills-section">
+  <h2 class="section-title">Mis Habilidades</h2>
+
+  <section class="skills-container">
+    @for (skill of skills; track $index) {
+    <article class="skill-card">
+      <header class="skill-header">
+        <img
+          [src]="skill.icon"
+          [alt]="'Logo de ' + skill.name"
+          class="skill-icon"
+          width="32"
+          height="32"
+        />
+        <h3 class="skill-name">{{ skill.name }}</h3>
+      </header>
+      <section class="progress-bar-container">
+        <article
+          class="progress-bar"
+          [style.width.%]="skill.percentage"
+          [attr.aria-label]="skill.name + ' - ' + skill.percentage + '%'"
+        ></article>
+      </section>
+      <p class="skill-percentage">{{ skill.percentage }}%</p>
+    </article>
+    }
+  </section>
+</section>

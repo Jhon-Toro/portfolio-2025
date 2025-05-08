@@ -1,0 +1,71 @@
+@use "utils" as *;
+
+.skills-section {
+  padding: pxToRem(32px);
+  background-color: #6e07f3;
+  border-radius: pxToRem(20px);
+}
+
+.section-title {
+  text-align: center;
+  font-size: pxToRem(50px);
+  margin-bottom: pxToRem(24px);
+  color: white;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(pxToRem(250px), 1fr));
+  gap: pxToRem(24px);
+}
+
+.skill-icon {
+  width: pxToRem(32px);
+  height: pxToRem(32px);
+  margin-right: pxToRem(12px);
+  object-fit: contain;
+}
+
+.skill-card {
+  background-color: #fff;
+  padding: pxToRem(16px);
+  border-radius: pxToRem(8px);
+  box-shadow: 0 pxToRem(2px) pxToRem(5px) rgba(0, 0, 0, 0.1);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: pxToRem(16px);
+}
+
+.skill-header i {
+  font-size: pxToRem(32px);
+  margin-right: pxToRem(16px);
+  color: #4caf50;
+}
+
+.skill-name {
+  font-size: pxToRem(20px);
+}
+
+.progress-bar-container {
+  background-color: #e5e7eb;
+  border-radius: pxToRem(8px);
+  height: pxToRem(10px);
+  overflow: hidden;
+  margin-bottom: pxToRem(8px);
+}
+
+.progress-bar {
+  background-color: #6e07f3;
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: pxToRem(8px);
+}
+
+.skill-percentage {
+  text-align: right;
+  font-size: pxToRem(16px);
+  color: #555;
+}

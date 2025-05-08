@@ -11,9 +11,10 @@ export class ButtonComponent {
   readonly disabled = input<boolean>(false);
   readonly click = output<void>();
   readonly link = input<string | null>();
-
+  readonly target = input<string | null>()
+  
   onClick(): void {
-    if (this.link)  window.open(this.link()!, '_blank');
+    if (this.link)  window.open(this.link()!, this.target()!);
     if (!this.disabled) this.click.emit();
   }
 }

@@ -6,12 +6,6 @@
       "href": ""
     },
     {
-      "label": "Sobre mí",
-      "icon": "v1746116568/paper_zminln.svg",
-      "active": false,
-      "href": "#aboutme"
-    },
-    {
       "label": "Proyectos",
       "icon": "v1746116568/command.line_dlwmmb.svg",
       "active": false,

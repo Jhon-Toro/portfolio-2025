@@ -6,10 +6,10 @@
     border-radius: pxToRem(10px);
 
     .section-title {
-        font-size: pxToRem(32px);
+        font-size: pxToRem(50px);
         text-align: center;
         margin-bottom: pxToRem(40px);
-        color: #333;
+        color: #000000;
     }
 
     .projects-container {
@@ -17,12 +17,12 @@
         grid-template-columns: repeat(3, 1fr);
         gap: pxToRem(20px);
         justify-items: center;
-        
-        @include media-ltlg(){
+
+        @include media-ltlg() {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @include media-ltmd(){
+        @include media-ltmd() {
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -87,7 +87,6 @@
         }
     }
 }
-
 
 app-button {
     margin: 0 auto;
