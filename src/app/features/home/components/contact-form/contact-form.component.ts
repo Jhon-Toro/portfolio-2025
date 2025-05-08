@@ -12,11 +12,11 @@ import { ContactService } from '../../../../core/services/contact/contact.servic
 import { InputComponent } from '../../../../shared/components/input/input.component';
 import { TextareaComponent } from '../../../../shared/components/textarea/textarea.component';
 import { ButtonComponent } from '../../../../shared/components/button/button.component';
-import { CustomValidators } from '../validators/custom-validators';
 import { ERROR_MESSAGES } from './data/contact-form-errors';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ContactFormData } from '../../../../core/services/contact/interfaces/contact-form-data/ContactFormData.interface';
 import { firstValueFrom } from 'rxjs';
+import { CustomValidators } from '../../validators/custom-validators';
 
 @Component({
   selector: 'app-contact-form',

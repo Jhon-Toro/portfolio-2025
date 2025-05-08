@@ -2,7 +2,6 @@
 
 .sidebar {
   width: pxToRem(80px);
-  height: 100vh;
   overflow: hidden;
   background-color: #ffffff;
   border-right: pxToRem(1px) solid #e5e7eb;
@@ -11,10 +10,11 @@
   flex-direction: column;
   padding: pxToRem(20px) pxToRem(15px);
   box-shadow: pxToRem(2px) 0 pxToRem(8px) rgba(0, 0, 0, 0.05);
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  height: 100%;
   box-shadow: pxToRem(1px) pxToRem(1px) pxToRem(20px) rgba(0, 0, 0, 0.5);
   text-wrap: nowrap;
   justify-content: space-between;

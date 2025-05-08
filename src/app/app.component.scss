@@ -1,3 +1,5 @@
+@use "utils" as *;
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -5,4 +7,10 @@
 
 .main-content {
     flex: 1;
+    margin-left: pxToRem(80px); 
+    transition: margin-left 0.3s ease;
+
+    &.main-content-expanded {
+      margin-left: pxToRem(250px);
+    }
 }
