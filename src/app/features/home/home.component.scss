@@ -3,6 +3,10 @@
 .contact-section {
     padding: pxToRem(80px);
     background-image: url('https://res.cloudinary.com/dxspvj1rj/image/upload/v1746672887/background_qifiua.jpg');
+
+    @include media-xs(){
+        padding: pxToRem(5px);
+    }
 }
 
 .hero-section {

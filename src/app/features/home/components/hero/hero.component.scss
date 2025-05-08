@@ -9,5 +9,14 @@
     &-title {
         font-size: pxToRem(80px);
         margin: 0;
+        text-align: center;
+
+        @include media-xs(){
+            font-size: pxToRem(50px);
+        }
+    }
+
+    &-description {
+        text-align: center;
     }
 }

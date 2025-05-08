@@ -1,20 +1,36 @@
+@if (isMobile && !isMobileVisible()) {
+  <button class="mobile-toggle" (click)="toggleSidebar()">
+    ☰
+  </button>
+}
+
+@if (isMobile && isMobileVisible()) {
+  <div class="mobile-backdrop visible" (click)="closeMobileSidebar()"></div>
+}
+
 <aside 
-  class="sidebar" 
-  [class.expanded]="isExpanded()"
-  [class.overlay]="isMobile"
+ class="sidebar" 
+ [class]="{
+   'expanded': isExpanded(),
+   'overlay': isMobile && isMobileVisible(),
+   'hidden-mobile': isMobile && !isMobileVisible(),
+   'mobile-animate-in': isMobile && isMobileVisible(),
+   'mobile-animate-out': isMobile && !isMobileVisible()
+ }"
 >
-  <app-sidebar-header [isExpanded]="isExpanded()" />
-  <app-hr />
-  <app-sidebar-nav
-    [sidebarItems]="sidebarItemsSignal()"
-    [isExpanded]="isExpanded()"
-  />
-  <app-hr />
-  <app-sidebar-settings
-    [settings]="settings"
-    [isExpanded]="isExpanded()"
-    (toggleSidebar)="toggleSidebar()"
-    (darkModeToggle)="onDarkModeToggle($event)"
-  />
-  <app-sidebar-user [isExpanded]="isExpanded()"/>
+ <app-sidebar-header [isExpanded]="isExpanded()" />
+ <app-hr />
+ <app-sidebar-nav
+   [sidebarItems]="sidebarItemsSignal()"
+   [isExpanded]="isExpanded()"
+   (click)="closeMobileSidebar()"
+ />
+ <app-hr />
+ <app-sidebar-settings
+   [settings]="settings"
+   [isExpanded]="isExpanded()"
+   (toggleSidebar)="toggleSidebar()"
+   (darkModeToggle)="onDarkModeToggle($event)"
+ />
+ <app-sidebar-user [isExpanded]="isExpanded()"/>
 </aside>

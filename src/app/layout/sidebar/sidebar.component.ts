@@ -6,13 +6,20 @@ import { SidebarHeaderComponentComponent } from "./components/sidebar-header/sid
 import { HrComponent } from "../../shared/components/hr/hr.component";
 import { SidebarNavComponentComponent } from "./components/sidebar-nav/sidebar-nav-component";
 import { SidebarSettingsComponentComponent } from "./components/sidebar-settings/sidebar-settings-component";
-import { SidebarUserComponentComponent } from "./components/sidebar-user/sidebar-user-component";
+
 import { SETTINGS__SIDEBAR } from './data/settings.data';
+import { SidebarUserComponentComponent } from './components/sidebar-user/sidebar-user-component';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [SidebarHeaderComponentComponent, HrComponent, SidebarNavComponentComponent, SidebarSettingsComponentComponent, SidebarUserComponentComponent],
+  imports: [
+    SidebarHeaderComponentComponent,
+    HrComponent,
+    SidebarNavComponentComponent,
+    SidebarSettingsComponentComponent,
+    SidebarUserComponentComponent
+  ],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
@@ -20,8 +27,11 @@ export class SidebarComponent {
   readonly #http = inject(HttpClient);
   readonly #sidebarItems = this.#http.get<SidebarItem[]>('assets/sidebar-items.json');
   readonly sidebarItemsSignal = toSignal(this.#sidebarItems, { initialValue: [] });
+
   readonly isExpanded = signal<boolean>(false);
+  readonly isMobileVisible = signal<boolean>(false);
   readonly toggleChange = output<boolean>();
+
   isMobile = window.innerWidth <= 768;
   settings = SETTINGS__SIDEBAR;
 
@@ -30,8 +40,12 @@ export class SidebarComponent {
   }
 
   toggleSidebar() {
-    this.isExpanded.set(!this.isExpanded());
-    this.toggleChange.emit(this.isExpanded());
+    if (this.isMobile) {
+      this.isMobileVisible.set(!this.isMobileVisible());
+    } else {
+      this.isExpanded.set(!this.isExpanded());
+      this.toggleChange.emit(this.isExpanded());
+    }
   }
 
   @HostListener('window:resize', [])
@@ -39,8 +53,17 @@ export class SidebarComponent {
     this.isMobile = window.innerWidth <= 768;
     if (this.isMobile) {
       this.isExpanded.set(true);
+      this.isMobileVisible.set(false);
     }
     this.toggleChange.emit(this.isExpanded());
+  }
+
+  closeMobileSidebar() {
+    if (this.isMobile) {
+      this.isMobileVisible.set(false);
+      setTimeout(() => {
+      }, 300);
+    }
   }
 
   onDarkModeToggle(checked: boolean) {

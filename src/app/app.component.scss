@@ -7,10 +7,17 @@
 
 .main-content {
     flex: 1;
-    margin-left: pxToRem(80px); 
     transition: margin-left 0.3s ease;
+    margin-left: pxToRem(80px); 
+
+    @include media-ltmd(){
+      margin-left: 0;
+    }
 
     &.main-content-expanded {
       margin-left: pxToRem(250px);
+      @include media-ltmd(){
+        margin-left: 0;
+      }
     }
 }

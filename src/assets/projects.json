@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Proyecto 1",
+      "image": "assets/images/project1.jpg",
+      "link": "https://enlace-proyecto1.com",
+      "status": "En progreso",
+      "description": "Descripción breve del proyecto 1."
+    },
+    {
+      "name": "Proyecto 2",
+      "image": "assets/images/project2.jpg",
+      "link": "https://enlace-proyecto2.com",
+      "status": "Finalizado",
+      "description": "Descripción breve del proyecto 2."
+    },
+    {
+      "name": "Proyecto 3",
+      "image": "assets/images/project3.jpg",
+      "link": "https://enlace-proyecto3.com",
+      "status": "En progreso",
+      "description": "Descripción breve del proyecto 3."
+    }
+]
+  
