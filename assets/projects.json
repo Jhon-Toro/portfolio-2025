@@ -32,12 +32,12 @@
       "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677806/gourmet-web_jytfta.png",
       "link": "https://jhon-toro.github.io/RGourmet/",
       "status": "Finalizado",
-      "description": "Clima app, Usando api de clima en Angular 17. Usando CSS de manera normal"
+      "description": "Proyecto con HTML, CSS, JS Vanilla"
     },
     {
       "name": "Portafolio",
-      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677806/gourmet-web_jytfta.png",
-      "link": "http://portfolio.labs-develop.cloud/",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746709637/portfolio_au1js4.png",
+      "link": "jhon-toro.github.io/portfolio-2025/",
       "status": "Finalizado",
       "description": "Portafolio personal"
     }
