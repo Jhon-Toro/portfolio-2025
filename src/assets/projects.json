@@ -1,24 +1,45 @@
 [
     {
-      "name": "Proyecto 1",
-      "image": "assets/images/project1.jpg",
-      "link": "https://enlace-proyecto1.com",
+      "name": "Ecommerce con nextjs",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746676885/Ecommerce-Strapi_ythmjt.png",
+      "link": "https://shop.labs-develop.cloud/",
       "status": "En progreso",
-      "description": "Descripción breve del proyecto 1."
+      "description": "Ecommerce con nextjs, usando strapi CMS. Actualmente en construcción."
     },
     {
-      "name": "Proyecto 2",
-      "image": "assets/images/project2.jpg",
-      "link": "https://enlace-proyecto2.com",
+      "name": "Todo App",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677296/todo-app_cksrai.png",
+      "link": "https://jhon-toro.github.io/todo-app/",
       "status": "Finalizado",
-      "description": "Descripción breve del proyecto 2."
+      "description": "Todo-App Hecho con React usando Redux y indexedDB"
     },
     {
-      "name": "Proyecto 3",
-      "image": "assets/images/project3.jpg",
-      "link": "https://enlace-proyecto3.com",
-      "status": "En progreso",
-      "description": "Descripción breve del proyecto 3."
+      "name": "Store Frontend",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677467/Store_frontend_zkynbp.png",
+      "link": "https://store-front-end-ten.vercel.app/",
+      "status": "Finalizado",
+      "description": "Proyecto Frontend final, Hecho en react integrado con api paypal"
+    },
+    {
+      "name": "Clima-App",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677638/clima-app_xlhlcd.png",
+      "link": "https://jhon-toro.github.io/clima-app/",
+      "status": "Finalizado",
+      "description": "Clima app, Usando api de clima en Angular 17. Usando CSS de manera normal"
+    },
+    {
+      "name": "Gourmet Web",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677806/gourmet-web_jytfta.png",
+      "link": "https://jhon-toro.github.io/RGourmet/",
+      "status": "Finalizado",
+      "description": "Clima app, Usando api de clima en Angular 17. Usando CSS de manera normal"
+    },
+    {
+      "name": "Portafolio",
+      "image": "https://res.cloudinary.com/dxspvj1rj/image/upload/v1746677806/gourmet-web_jytfta.png",
+      "link": "http://portfolio.labs-develop.cloud/",
+      "status": "Finalizado",
+      "description": "Portafolio personal"
     }
 ]
   

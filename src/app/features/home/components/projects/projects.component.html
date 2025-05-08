@@ -1,0 +1,24 @@
+<section class="projects-section">
+  <h2 class="section-title">Mis Proyectos</h2>
+
+  <section class="projects-container">
+    @for (project of projects; track $index) {
+    <article class="project-card">
+      <img
+        [src]="project.image"
+        alt="Imagen de {{ project.name }}"
+        class="project-image"
+      />
+      <div class="project-info">
+        <h3 class="project-name">{{ project.name }}</h3>
+        <p class="project-status">{{ project.status }}</p>
+        <p class="project-description">{{ project.description }}</p>
+      </div>
+      <app-button
+        text="Ver proyecto"
+        [link]="project.link"
+      />
+    </article>
+    }
+  </section>
+</section>

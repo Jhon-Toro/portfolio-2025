@@ -1,0 +1,96 @@
+@use "utils" as *;
+
+.projects-section {
+    padding: pxToRem(40px);
+    background-color: #f9fafb;
+    border-radius: pxToRem(10px);
+
+    .section-title {
+        font-size: pxToRem(32px);
+        text-align: center;
+        margin-bottom: pxToRem(40px);
+        color: #333;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: pxToRem(20px);
+        justify-items: center;
+        
+        @include media-ltlg(){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-ltmd(){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .project-card {
+        background-color: #ffffff;
+        border-radius: pxToRem(8px);
+        box-shadow: pxToRem(0px) pxToRem(2px) pxToRem(10px) rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        width: 100%;
+        max-width: pxToRem(350px);
+        cursor: pointer;
+        padding-bottom: pxToRem(30px);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: pxToRem(0px) pxToRem(4px) pxToRem(20px) rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: pxToRem(200px);
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-info {
+            padding: pxToRem(20px);
+
+            .project-name {
+                font-size: pxToRem(24px);
+                color: #333;
+                margin-bottom: pxToRem(8px);
+            }
+
+            .project-status {
+                font-size: pxToRem(16px);
+                color: #4caf50;
+                margin-bottom: pxToRem(10px);
+            }
+
+            .project-description {
+                font-size: pxToRem(14px);
+                color: #666;
+                margin-bottom: pxToRem(15px);
+            }
+
+            .project-link {
+                font-size: pxToRem(16px);
+                color: #007bff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #0056b3;
+                }
+            }
+        }
+    }
+}
+
+
+app-button {
+    margin: 0 auto;
+    width: max-content;
+    display: flex;
+}
