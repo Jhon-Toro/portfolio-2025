@@ -13,10 +13,8 @@ import { InputComponent } from '../../../../shared/components/input/input.compon
 import { TextareaComponent } from '../../../../shared/components/textarea/textarea.component';
 import { ButtonComponent } from '../../../../shared/components/button/button.component';
 import { ERROR_MESSAGES } from './data/contact-form-errors';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { ContactFormData } from '../../../../core/services/contact/interfaces/contact-form-data/ContactFormData.interface';
-import { firstValueFrom } from 'rxjs';
-import { CustomValidators } from '../../validators/custom-validators';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-contact-form',
@@ -37,17 +35,17 @@ export class ContactFormComponent {
   readonly isSuccess = signal<boolean>(false);
   readonly isLoading = signal<boolean>(false);
   readonly errorMessages = ERROR_MESSAGES;
+
   readonly contactForm = this.#formBuilder.group({
-    name: ['', [Validators.required, CustomValidators.namePattern()]],
+    name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]*$/)]],
     email: ['', [Validators.required, Validators.email]],
-    subject: ['', Validators.required, CustomValidators.subjectPattern],
+    subject: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]*$/)]],
     message: [
       '',
       [
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(500),
-        CustomValidators.messagePattern(),
       ],
     ],
   });
@@ -63,10 +61,8 @@ export class ContactFormComponent {
     this.isLoading.set(true);
 
     try {
-      await firstValueFrom(
-        this.#contactService.sendContactForm(
-          this.contactForm.getRawValue() as ContactFormData
-        )
+      this.#contactService.sendContactForm(
+        this.contactForm.getRawValue() as ContactFormData
       );
 
       this.isSuccess.set(true);

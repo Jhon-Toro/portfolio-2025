@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Project } from '../../interfaces/project.interface';
-import { NgOptimizedImage } from '@angular/common';
 import { ButtonComponent } from "../../../../shared/components/button/button.component";
 
 
@@ -10,7 +8,7 @@ import { ButtonComponent } from "../../../../shared/components/button/button.com
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  imports: [NgOptimizedImage, ButtonComponent]
+  imports: [ButtonComponent]
 })
 export class ProjectsComponent {
   projects: Project[] = [];

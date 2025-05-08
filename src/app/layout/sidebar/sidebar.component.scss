@@ -81,6 +81,19 @@
   }
 }
 
+.mobile-toggle {
+  background-color: white;
+  padding: pxToRem(10px);
+  border-radius: pxToRem(5px);
+  box-shadow: 0 pxToRem(4px) pxToRem(8px) rgba(0, 0, 0, 0.1), 0 pxToRem(1px) pxToRem(3px) rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+  width: pxToRem(40px);
+  
+  &:hover {
+    box-shadow: 0 pxToRem(6px) pxToRem(12px) rgba(0, 0, 0, 0.15), 0 pxToRem(2px) pxToRem(4px) rgba(0, 0, 0, 0.1);
+  }
+}
+
 @include media-ltmd() {
   .mobile-toggle {
     display: block;

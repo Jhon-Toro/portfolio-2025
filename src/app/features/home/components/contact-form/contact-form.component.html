@@ -49,6 +49,7 @@
       text="Enviar"
       type="submit"
       [disabled]="isLoading()"
+      target="_self"
       aria-label="Enviar formulario de contacto"
     />
   </form>
@@ -56,4 +57,5 @@
   @if (isSuccess()) {
     <span class="success-message" aria-live="polite">¡Se envió tu formulario correctamente!</span>
   }
+  
 </section>

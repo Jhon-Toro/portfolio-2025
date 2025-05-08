@@ -5,7 +5,7 @@ import { SwitchComponent } from "../../../../shared/components/switch/switch.com
 
 @Component({
   selector: 'app-sidebar-settings',
-  imports: [NgOptimizedImage, SwitchComponent],
+  imports: [NgOptimizedImage],
   templateUrl: './sidebar-settings-component.html',
   styleUrl: './sidebar-settings-component.scss'
 })

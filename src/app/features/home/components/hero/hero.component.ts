@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from "../../../../shared/components/button/button.component";
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
-  imports: [ButtonComponent, NgOptimizedImage],
+  imports: [ButtonComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

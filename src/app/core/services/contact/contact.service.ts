@@ -1,18 +1,24 @@
-import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { ContactFormData } from './interfaces/contact-form-data/ContactFormData.interface';
-import { ContactResponse } from './interfaces/contact-response/ContactResponse.interface';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class ContactService {
-  readonly apiUrl = 'http://localhost:3000/api/contact';
-  readonly #httpClient = inject(HttpClient);
+  private serviceId = 'service_m0wr5se';
+  private templateId = 'template_gs1ta4r';
+  private userId = 'gFdLv8_3At5i2-X1f';
 
-  sendContactForm(data: ContactFormData): Observable<ContactResponse> {
-    return this.#httpClient.post<ContactResponse>(this.apiUrl, data);
+  sendContactForm(data: ContactFormData): Observable<EmailJSResponseStatus> {
+    return from(
+      emailjs.send(
+        this.serviceId,
+        this.templateId,
+        data as unknown as Record<string, unknown>, 
+        this.userId
+      )
+    );
   }
 }

@@ -1,2 +1,6 @@
 @forward './styles/globals';
 @forward './styles/utility-classes';
+
+html {
+    scroll-behavior: smooth;
+}
