@@ -15,6 +15,10 @@ button {
     transform: translateY(-2px);
   }
 
+  &:focus {
+    background-color: #8f41f5;
+    outline-color: #6E07F3;
+  }
   &.disabled {
     background-color: #6c757d;
     cursor: not-allowed;

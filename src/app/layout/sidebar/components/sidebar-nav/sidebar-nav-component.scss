@@ -19,6 +19,10 @@
     border-radius: 0.5rem;
     transition: background-color 0.2s;
 
+    &:focus {
+      outline-color: #6E07F3;
+    }
+    
     span {
       opacity: 0;
       transition: opacity 0.3s;
