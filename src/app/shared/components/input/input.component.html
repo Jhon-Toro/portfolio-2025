@@ -1,0 +1,18 @@
+<section class="input-container">
+  <label [for]="inputId">{{ label() }}</label>
+  <input
+    [type]="type()"
+    [id]="inputId"
+    [placeholder]="placeholder()"
+    [value]="value()"
+    [disabled]="disabled()"
+    (input)="onInput($event)"
+    (blur)="onTouched()"
+    [attr.aria-invalid]="showErrors() && control()!.invalid ? 'true' : 'false'"
+    [attr.aria-describedby]="showErrors() && control()!.invalid ? inputId + '-error' : null"
+    [class.invalid]="showErrors() && control()!.invalid"
+  />
+  @if (showErrors() && control()!.invalid && control()!.errors) {
+    <span class="error" [id]="inputId + '-error'" role="alert">{{ getErrorMessage() }}</span>
+  }
+</section>

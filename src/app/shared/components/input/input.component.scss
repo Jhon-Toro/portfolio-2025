@@ -1,0 +1,39 @@
+@use "utils" as *;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: pxToRem(24px);
+
+  label {
+    font-size: pxToRem(16px);
+    margin-bottom: pxToRem(8px);
+    color: #000000;
+    font-weight: 500;
+  }
+
+  input {
+    padding: pxToRem(17px) pxToRem(14px);
+    border: pxToRem(1px) solid #ffffff;
+    border-radius: pxToRem(10px);
+    font-size: pxToRem(16px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 pxToRem(5px) rgba(0, 123, 255, 0.3);
+    }
+
+    &.invalid {
+      border-color: #dc3545;
+    }
+  }
+
+  .error {
+    display: block;
+    color: #dc3545;
+    font-size: pxToRem(13.6px);
+    margin-top: pxToRem(4px);
+    min-height: pxToRem(16px);
+  }
+}

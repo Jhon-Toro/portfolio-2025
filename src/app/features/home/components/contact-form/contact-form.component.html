@@ -1,0 +1,59 @@
+<section class="contact-form-container">
+  <h2 class="contact-form-container-title">Contacto</h2>
+  <form class="contact-form-container-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" role="form">
+    <p class="visually-hidden">Por favor, envía tu mensaje y me pondré en contacto contigo lo antes posible.</p>
+    <app-input
+      #nameInput
+      label="Nombre"
+      type="text"
+      formControlName="name"
+      placeholder="Tu nombre"
+      [errorMessages]="errorMessages.name"
+      [control]="contactForm.get('name')!"
+      [showErrors]="isSubmitted()"
+    />
+
+    <app-input
+      #emailInput
+      label="Correo electronico"
+      type="email"
+      formControlName="email"
+      placeholder="Tu correo"
+      [errorMessages]="errorMessages.email"
+      [control]="contactForm.get('email')!"
+      [showErrors]="isSubmitted()"
+    />
+
+    <app-input
+      #subjectInput
+      label="Asunto"
+      type="text"
+      formControlName="subject"
+      placeholder="Asunto"
+      [errorMessages]="errorMessages.subject"
+      [control]="contactForm.get('subject')!"
+      [showErrors]="isSubmitted()"
+    />
+
+    <app-textarea
+      #messageTextarea
+      label="Mensaje"
+      formControlName="message"
+      placeholder="Escribe tu mensaje"
+      [errorMessages]="errorMessages.message"
+      [control]="contactForm.get('message')!"
+      [showErrors]="isSubmitted()"
+    />
+
+    <app-button
+      text="Enviar"
+      type="submit"
+      [disabled]="isLoading()"
+      aria-label="Enviar formulario de contacto"
+    />
+  </form>
+
+  @if (isSuccess()) {
+    <span class="success-message" aria-live="polite">¡Se envió tu formulario correctamente!</span>
+  }
+</section>

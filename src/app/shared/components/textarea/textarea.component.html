@@ -1,0 +1,17 @@
+<section class="textarea-container">
+  <label [for]="textareaId">{{ label() }}</label>
+  <textarea
+    [id]="textareaId"
+    [placeholder]="placeholder()"
+    [value]="value()"
+    [disabled]="disabled()"
+    (input)="onInput($event)"
+    (blur)="onTouched()"
+    [attr.aria-invalid]="showErrors() && control()!.invalid ? 'true' : 'false'"
+    [attr.aria-describedby]="showErrors() && control()!.invalid ? textareaId + '-error' : null"
+    [class.invalid]="showErrors() && control()!.invalid"
+  ></textarea>
+  @if (showErrors() && control()!.invalid && control()!.errors) {
+    <span class="error" [id]="textareaId + '-error'" role="alert">{{ getErrorMessage() }}</span>
+  }
+</section>

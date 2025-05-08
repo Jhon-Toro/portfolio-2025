@@ -1,0 +1,58 @@
+@use "utils" as *;
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.contact-form-container {
+  max-width: pxToRem(550px);
+  margin: pxToRem(32px) auto;
+  padding: pxToRem(50px);
+  background: #e9e9e9;
+  border-radius: pxToRem(25px);
+  box-shadow: 0 pxToRem(4px) pxToRem(10px) rgba(255, 255, 255, 0.363);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: pxToRem(8px);
+
+  &-title {
+    text-align: center;
+    color: #000000;
+    font-size: pxToRem(40px);
+    margin: 0;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .success-message {
+    margin-top: pxToRem(16px);
+    padding: pxToRem(16px);
+    background: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: pxToRem(4px);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @include media-ltmd(){
+    padding: pxToRem(16px);
+    margin: pxToRem(16px);
+  }
+}
+
+app-button{
+  width: max-content;
+  margin: 0 auto;
+}

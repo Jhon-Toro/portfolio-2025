@@ -1,0 +1,23 @@
+@use "utils" as *;
+
+button {
+  padding: pxToRem(16px) pxToRem(50px);
+  border: none;
+  border-radius: pxToRem(10px);
+  background-color: #6E07F3;
+  color: white;
+  font-size: pxToRem(16px);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #8f41f5;
+    transform: translateY(-2px);
+  }
+
+  &.disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
